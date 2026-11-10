@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMORA | Modern Shopping</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="#" class="logo">LUMORA<span>.</span></a>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#products">Shop</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+            <button class="cart-btn" id="cartBtn">
+                Bag <span id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">NEW COLLECTION 2026</p>
+            <h1>Find your style.<br>Define your <em>world.</em></h1>
+            <p class="hero-description">
+                Discover thoughtfully selected essentials
+                that bring beauty and simplicity to everyday life.
+            </p>
+            <a href="#products" class="primary-btn">Explore Collection →</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1000" alt="Fashion collection">
+        </div>
+
+        <div class="hero-label">STYLE THAT SPEAKS</div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div>✦ Free shipping over $100</div>
+        <div>✦ Carefully selected products</div>
+        <div>✦ Easy 30-day returns</div>
+    </section>
+
+    <!-- Products -->
+    <main id="products" class="products-section">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">OUR COLLECTION</p>
+                <h2>Explore our products</h2>
+            </div>
+            <p>Simple pieces. Beautiful living.</p>
+        </div>
+
+        <!-- Search -->
+        <div class="search-container" id="searchContainer">
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+
+        <!-- Categories -->
+        <div class="categories" id="categories">
+            <button class="category-btn active" data-category="All">All</button>
+            <button class="category-btn" data-category="Fashion">Fashion</button>
+            <button class="category-btn" data-category="Accessories">Accessories</button>
+            <button class="category-btn" data-category="Lifestyle">Lifestyle</button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="productGrid">
+            <!-- Products are added using JavaScript -->
+        </div>
+
+        <p class="empty-message" id="emptyMessage" hidden>
+            No products found. Try another search.
+        </p>
+
+    </main>
+
+    <!-- About -->
+    <section class="about-section" id="about">
+        <p class="eyebrow">THE LUMORA STORY</p>
+        <h2>Less, but better.</h2>
+        <p>
+            We believe shopping should feel effortless.
+            Our collection brings together timeless design,
+            everyday comfort and thoughtful details.
+        </p>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h2>A little inspiration, in your inbox.</h2>
+        <p>Get updates about our latest collections.</p>
+        <form id="newsletterForm">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe →</button>
+        </form>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Shopping Bag</h2>
+            <button id="closeCart" class="close-btn">✕</button>
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cartTotal">$0.00</strong>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">
+                Proceed to Checkout
+            </button>
+            <p>Shipping and taxes calculated at checkout.</p>
+        </div>
+    </aside>
+
+    <!-- Toast Message -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#" class="logo">LUMORA<span>.</span></a>
+        <p>© 2026 LUMORA. Designed with simplicity.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
